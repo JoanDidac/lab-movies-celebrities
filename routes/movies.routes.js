@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Movie = require("../models/Movie.model");
 
-/* GET all movies list */
+/* all movies list */
 router.get("/", async (req, res, next) => {
   try {
     const movies = await Movie.find({}).sort({title: 1});
@@ -11,7 +11,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-/* GET route to display add a movie form */
+/* display add a movie form */
 router.get("/create", async (req, res, next) => {
   try {
     const celebrities = await Celebrity.find({}).sort({name: 1});
@@ -21,7 +21,7 @@ router.get("/create", async (req, res, next) => {
   }
 });
 
-/* POST route to create the movie from the form */
+/* create the movie from the form */
 router.post("/create", async (req, res, next) => {
   const { title, genre, plot, cast } = req.body;
   try {
@@ -32,7 +32,7 @@ router.post("/create", async (req, res, next) => {
   }
 });
 
-/* GET movie details page */
+/* movie details page */
 router.get("/:movieId", async (req, res, next) => {
   const { movieId } = req.params;
   try {
@@ -43,7 +43,7 @@ router.get("/:movieId", async (req, res, next) => {
   }
 });
 
-/* POST route to delete movies */
+/* delete movies */
 router.post("/:movieId/delete", async (req, res, next) => {
   const { movieId } = req.params;
   try {
@@ -54,7 +54,7 @@ router.post("/:movieId/delete", async (req, res, next) => {
   }
 });
 
-/* GET route to edit movie form */
+/* edit movie form */
 router.get("/:movieId/edit", async (req, res, next) => {
   const { movieId } = req.params;
   try {
@@ -66,7 +66,7 @@ router.get("/:movieId/edit", async (req, res, next) => {
   }
 });
 
-/* POST route to send edited movie data to DB*/
+/* send edited movie to database */
 router.post("/:movieId/edit", async (req, res, next) => {
   const { movieId } = req.params;
   const { title, genre, plot, cast } = req.body;

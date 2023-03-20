@@ -2,7 +2,7 @@ const Celebrity = require("../models/Celebrity.model");
 
 const router = require("express").Router();
 
-/* GET route to display all celebrities */
+
 router.get("/", async (req, res, next) => {
   try {
     const celebrities = await Celebrity.find({}).sort({name: 1});
@@ -12,7 +12,7 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-/* GET route form to create celebrity */
+
 router.post('/create', (req, res) => {
   const { name, occupation, catchPhrase } = req.body;
   const newCelebrity = new Celebrity({ name, occupation, catchPhrase });

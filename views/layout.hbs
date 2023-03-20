@@ -1,30 +1,57 @@
-<!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}}</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{{title}}</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
 
-  <body>
-    <header>
-      {{!-- <img src="../images/cinema-logo.png" /> --}}
-      <ul class="navbar">
-        <li><a href="/">Home page</a></li>
-        <li><a href="/movies/create">Add a movie</a></li>
-        <li><a href="/movies">Check movies list</a></li>
-        <li><a href="/celebrities/create">Add a celebrity</a></li>
-        <li><a href="/celebrities">Check celebrities list</a></li>
-      </ul>
-    </header>
-    <div class="container">
-      {{{body}}}
+<body>
+  <header>
+
+    <ul class="navbar">
+      <img src="/images/claqueta-icon.png" alt="icon" />
+      <li><a href="/">Home page</a></li>
+      <li><a href="/movies/create">Add a movie</a></li>
+      <li><a href="/movies">Check movies list</a></li>
+      <li><a href="/celebrities/create">Add a celebrity</a></li>
+      <li><a href="/celebrities">Check celebrities list</a></li>
+    </ul>
+  </header>
+  <div class="section1">
+  <h1 class="landing-title">CELEBRITY CATALOGUE</h1>
+  <img id="body-container"
+    src="https://www.nicepng.com/png/detail/226-2263920_last-vegas-cast-michael-douglas-robert-de-niro.png"
+    alt="actors image">
+   
     </div>
-    <script src="/javascripts/script.js"></script>
-  </body>
+  <div class="container">
+    <img class="cinematicImg" src="/images/cinematic-image.png" alt="cinematic" />
+    {{{body}}}
+    <img class="cinema-cam" src="/images/cinema-cam.png" alt="cinema-cam" />
+  </div>
+  <script src="/javascripts/script.js"></script>
+</body>
+<footer>
+
+  <div class="createdBy">
+    <div class="brand-container">
+      <div class="brands">
+        <div class="signature">Created By U&D™ | All Rights Reserved
+          <img src="/images/dolby-digital.png" alt="icon-brand1" />
+          <img src="/images/new-line-cinema.png" alt="icon-brand2" />
+          {{!-- <img src="/images/cineworld.png" alt="icon-brand3" /> --}}
+          <img src="/images/harkings-theatres.png" alt="icon-brand4" />
+          <img src="/images/regal-cinema-white.png" alt="icon-brand5" />
+          <img src="/images/palace-cinema.png" alt="icon-brand6" />
+
+        </div>
+
+      </div>
+    </div>
+</footer>
 
 </html>
