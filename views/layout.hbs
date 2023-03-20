@@ -11,10 +11,19 @@
   </head>
 
   <body>
+    <header>
+      {{!-- <img src="../images/cinema-logo.png" /> --}}
+      <ul class="navbar">
+        <li><a href="/">Home page</a></li>
+        <li><a href="/movies/create">Add a movie</a></li>
+        <li><a href="/movies">Check movies list</a></li>
+        <li><a href="/celebrities/create">Add a celebrity</a></li>
+        <li><a href="/celebrities">Check celebrities list</a></li>
+      </ul>
+    </header>
     <div class="container">
       {{{body}}}
     </div>
-
     <script src="/javascripts/script.js"></script>
   </body>
 

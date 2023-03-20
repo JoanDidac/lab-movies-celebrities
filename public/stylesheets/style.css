@@ -1,8 +1,173 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00b7ff;
+} */
+
+/* <----> */
+/* general style */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  height: 80px;
+  width: 100%;
+  margin-bottom: 100px;
+  background-color: rgb(150, 127, 185);
+  position: sticky;
+  top: 0%;
+}
+.landing-img {
+  height: 1000px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+img {
+  height: 50px;
+  margin-top: 10px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+header ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+header ul li a {
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 1.25em;
+}
+header ul li a:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+button,
+.edit-button {
+  height: 60px;
+  width: 180px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.719);
+  padding-left: 80px;
+  background-position: 20px;
+  border-radius: 30px;
+}
+.add-card button:hover,
+.delete-button:hover,
+.edit-button:hover {
+  transform: scale(1.15);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* movies/create and celebrities/create style */
+.add-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.add-card form {
+  background-color: rgba(150, 127, 185, 0.425);
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.add-card input, select {
+  border: none;
+}
+.add-card select {
+  appearance: none;
+  padding: 0 1em 0 0;
+  margin: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  border-radius: 0.5em;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  line-height: 1.1;
+  font-size: 0.9em;
+}
+.add-card button {
+  background-image: url("../images/add-button.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(128, 128, 128, 0.719);
+}
+.add-card button:hover {
+  background-color: rgba(0, 128, 0, 0.616);
+}
+
+/* all celebrities style */
+.delete-button {
+  background-image: url("../images/delete-button.png");background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 50px;
+  padding-left: 90px;
+  background-color: rgba(128, 128, 128, 0.719);
+}
+.delete-button:hover {
+  background-color: rgba(255, 0, 0, 0.514);
+}
+.celeb-div {
+  display: flex;
+  flex-direction: column;
+}
+.celeb-div p,
+.celeb-div form,
+.movie-title {
+  text-align: center;
+}
+
+/* all movies style */
+.movie-title:hover {
+  letter-spacing: 2px;
+}
+
+/* movie detail style */
+.movie-card {
+  background-color: rgba(150, 127, 185, 0.425);
+  padding: 50px;
+  border-radius: 20px;
+}
+.movie-card h4 {
+  font-weight: bold;
+}
+.edit-button {
+  text-decoration: none;
+  color: black;
+  padding: 20px 50px 20px 50px;
+  text-align: right;
+}
+.edit-button:hover {
+  color: black;
+  text-decoration: none;
+  background-color: rgb(150, 127, 185);
+}
+.movie-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
 }
