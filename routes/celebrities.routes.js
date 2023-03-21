@@ -23,7 +23,8 @@ router.get('/create', (req, res, next) => {
 // ROUTE: /celebrities/create
 router.post('/create', async (req, res, next) => {
     console.log(req.body);
-    const { name, occupation, catchPhrase } = req.body;
+    const { name, occupation, catchPhrase: catchPhrase } = req.body;
+
     // if (!name) {
     //     // send an error response if name is missing
     //     return res.status(400).send('Name is required');
