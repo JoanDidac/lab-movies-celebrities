@@ -1,4 +1,12 @@
-<h2>All movies list</h2>
-{{#each movies}}
-  <p class="movie-title"><a href="/movies/{{this._id}}">{{this.title}}</a></p>
-{{/each}}
+<div class="all-movies-container">
+  <h2 id="all-movies-title">All movies list</h2>
+  {{#each movies}}
+  <div class="movies-description">
+    <p class="movie-title"><a href="/movies/{{this._id}}">{{this.title}}</a></p>
+    <p><a href="/movies/{{this._id}}"></a>▷ {{this.plot}}</p>
+    <form action="/movies/delete/{{this._id}}" method="POST">
+      <button class="delete-button" type="submit">Delete Movie</button>
+    </form>
+  </div>
+  {{/each}}
+</div>

@@ -51,7 +51,7 @@ router.get('/details/:movieId', async (req, res, next) => {
 
 // GET delete movie
 // ROUTE: /movies/delete/:movieId
-router.get('/delete/:movieId', async (req, res, next) => {
+router.post('/delete/:movieId', async (req, res, next) => {
     const { movieId } = req.params;
     try {
         await Movie.findByIdAndDelete(movieId);
@@ -60,6 +60,16 @@ router.get('/delete/:movieId', async (req, res, next) => {
         next(error);
     }
 });
+
+// router.post('/delete/:movieId', async (req, res, next) => {
+//     const { movieId } = req.params;
+//     try {
+//         await Movie.findByIdAndRemove(movieId);
+//         res.redirect('/movies');
+//     } catch (error) {
+//         next(error);
+//     }
+// });
 
 // GET for edit movie
 // ROUTE: /movies/edit/:movieId
