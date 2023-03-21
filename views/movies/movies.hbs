@@ -4,8 +4,8 @@
   <div class="movies-description">
     <p class="movie-title"><a href="/movies/{{this._id}}">{{this.title}}</a></p>
     <p><a href="/movies/{{this._id}}"></a>▷ {{this.plot}}</p>
-    <form action="/movies/delete/{{this._id}}" method="POST">
-      <button class="delete-button" type="submit">Delete Movie</button>
+    <form  action="/movies/delete/{{this._id}}" method="POST">
+      <button id="delete-btn" type="submit">Delete Movie</button>
     </form>
   </div>
   {{/each}}
