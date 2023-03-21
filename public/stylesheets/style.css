@@ -152,20 +152,40 @@ button,
 .edit-button:hover {
   transform: scale(1.15);
 }
-h2 {
+/* h2 {
   text-align: center;
   margin-bottom: 50px;
-}
+} */
 
 /* movies/create and celebrities/create style */
+
 .add-card {
+  
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  margin: 50px;
+  margin-bottom: 220px;
 }
+.add-card h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #f35;
+}
+
 .add-card form {
+  width: 80%;
+  height: 80vh;
+  flex-direction: column;
   background-color: rgba(150, 127, 185, 0.425);
   border-radius: 10px;
   padding: 50px;
@@ -175,9 +195,43 @@ h2 {
   gap: 20px;
 }
 .add-card input, select {
-  border: none;
+  
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+
+  .add-card input:focus,
+.add-card select:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #f35;
 }
-.add-card select {
+.add-card button[type="submit"] {
+  margin-top: 30px;
+  background-color: #f35;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-card button[type="submit"]:hover {
+  background-color: #d20c3f;
+}
+
+
+
+/* .add-card select {
   appearance: none;
   padding: 0 1em 0 0;
   margin: 2px;
@@ -190,7 +244,7 @@ h2 {
   cursor: pointer;
   line-height: 1.1;
   font-size: 0.9em;
-}
+} */
 .add-card button {
   background-image: url("../images/add-button.png");
   background-repeat: no-repeat;
@@ -271,9 +325,10 @@ footer {
   background-color: #1b1b1b7c;
   color: white;
   padding: 50px;
- position:sticky;
- margin-top: -175px;
- 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
  
  
 }
@@ -328,3 +383,4 @@ footer {
   padding-right: 40px;
   
 }
+
