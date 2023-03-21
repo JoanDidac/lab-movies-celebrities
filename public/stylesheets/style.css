@@ -384,3 +384,60 @@ footer {
   
 }
 
+/* <--- celebrities.hbs card ---> */
+
+.celebrity-card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* style for the celebrity name */
+.celebrity-card h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* style for the occupation and catchphrase */
+.celebrity-card p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* style for the catchphrase */
+.celebrity-card p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* style for the celebrity image */
+.celebrity-card::before {
+  
+  content: "";
+  background-image: url("/images/cinema-cam.png");
+  background-size: 130%;
+  background-position: 67% 59%;
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* style for the celebrity image (actual image) */
+.celebrity-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
