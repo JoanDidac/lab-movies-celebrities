@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+mongoose.set('strictQuery', false);
+
 const celebritySchema = new mongoose.Schema({
   name: {
     type: String,
@@ -17,6 +19,8 @@ const celebritySchema = new mongoose.Schema({
   //   type: String,
   //   default: "https://via.placeholder.com/150"
   // }
+  
+   
 });
 
 const Celebrity = mongoose.model('Celebrity', celebritySchema);

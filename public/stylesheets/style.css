@@ -2,6 +2,7 @@
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: lighter;
+  background-color: rgb(247,247,247);
   
 }
 
@@ -10,9 +11,9 @@
 }  */
 
 #body-container {
-  width: 50%;
-  height: 100%;
-  margin-left: 50vw;
+  width: 100%;
+  height: 130%;
+  margin-left: auto;
   margin-right: auto;
   display: block;
   justify-content: center;
@@ -47,33 +48,73 @@ header {
   
   
 }
-.landing-img {
+/* .landing-img {
   position: relative;
-  height: 1000px;
-  min-height: 1000px;
-  /* min-width: 100%; */
+  
+  min-height:min-content;
+
+  min-width: min-content;
+  max-width: 100%;
+  max-height: 100%;
+   min-width: 100%; 
   position: absolute;
   top: 0%;
   left: 0%;
   z-index: -1;
  
-}
+} */
 img {
   height: 100px;
   margin-top: 10px;
 }
+
 .landing-title {
-  color: rgb(34, 34, 34);
-  text-shadow:1px 1px 1px rgba(255, 0, 0, 0.538), 10px 10px 2px rgba(172, 0, 0, 0.286); 
+  /* width: fit-content; */
+  color: rgb(0, 0, 0);
+  background-color: rgba(192, 192, 192, 0.05);
+  text-shadow:1px 1px 1px rgba(255, 0, 0, 0.698), 1px 1px 1px white, 10px 10px 2px rgba(172, 0, 0, 0.286); 
   position: absolute;
   font-size: 5.2rem;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight:lighter;
-  letter-spacing: 5px;
-  top: 60%;
-  left:15%;
+  letter-spacing: 20px;
+  top: 70%;
+  left:18%;
+
+}
+.create-celebrity a {
+  font-size: 2rem;
+  position: relative;
+  
+ 
+ 
+}
+.create-celebrity {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: lighter;
+  letter-spacing: 10px;
+  background-color: rgba(255, 51, 85, 0.828);
+  transition: background-color 0.2s ease;
+  padding: 3px 10px;
+  border-radius: 5px;
   
 }
+
+.create-celebrity:hover {
+  color:white;
+  text-decoration: none;
+  background-color: rgb(143, 0, 0);
+}
+
 
 .navbar {
   display: flex;
@@ -230,19 +271,27 @@ footer {
   background-color: #1b1b1b7c;
   color: white;
   padding: 50px;
+ position:sticky;
+ margin-top: -175px;
+ 
+ 
+ 
 }
 
 .createdBy {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .brand-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 30px;
+  
+  
 }
 
 .brands {
@@ -251,15 +300,21 @@ footer {
   align-items: center;
   width: 1300px;
   height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
 }
 
 .brands img {
-  width: 120px;
+  width: 180px;
   height: 120px;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.6;
   transition: all 0.3s ease;
+  padding-left:25px;
+  padding-right: 25px;
+ 
 }
 
 .brands img:hover {
@@ -270,4 +325,6 @@ footer {
 .signature {
   font-size: 1rem;
   margin-top: 30px;
+  padding-right: 40px;
+  
 }

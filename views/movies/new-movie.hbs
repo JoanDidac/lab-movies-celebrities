@@ -1,0 +1,18 @@
+<div class="add-card">
+  <h2>Please add your movie's information as requested below:</h2>
+  <form method="POST" action="/movies/create">
+    <label>Name:</label>
+    <input required type="text" name="title" placeholder="Inception"></input>
+    <label>Genre:</label>
+    <input required type="text" name="genre" placeholder="Action/Sci-fi"></input>
+    <label>Plot:</label>
+    <input type="text" name="plot" placeholder="Movie's synopsis"></input>
+    <label>Cast:</label>
+    <select name="cast" multiple>
+      {{#each celebrities}}
+        <option title="To select multiple entrees, keep pressing CTRL key and click on each celebrity you desire to add to this movie's cast." value="{{this._id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+    <button type="submit">Add movie</button>
+  </form>
+</div>

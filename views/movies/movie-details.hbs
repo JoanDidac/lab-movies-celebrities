@@ -1,0 +1,19 @@
+<h2>About this movie</h2>
+<div class="movie-card">
+  <!-- Couldn't make it work with this.title etc, didn't find my mistake so used this as workaround to pull data - issue surely located in route's logic -->
+  <h4>{{movie.title}}</h4>
+  <p>Genre: {{movie.genre}}</p>
+  <p>Synopsis: {{movie.plot}}</p>
+  <p>Cast:</p>
+  <ul>
+    {{#each movie.cast}}
+      <li>{{this.name}}, {{this.occupation}}, catch phrase: {{this.catchPhrase}}</li>
+    {{/each}}
+  </ul>
+</div>
+<div class="movie-buttons">
+  <form method="POST" action="/movies/{{movie._id}}/delete">
+    <button class="delete-button" type="submit">Delete movie</button>
+  </form>
+  <a class="edit-button" href="/movies/{{movie._id}}/edit">Edit movie</a>
+</div>
