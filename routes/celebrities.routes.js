@@ -22,11 +22,17 @@ router.get('/create', (req, res, next) => {
 // POST for new celebrity
 // ROUTE: /celebrities/create
 router.post('/create', async (req, res, next) => {
+    console.log(req.body);
     const { name, occupation, catchPhrase } = req.body;
+    // if (!name) {
+    //     // send an error response if name is missing
+    //     return res.status(400).send('Name is required');
+    // }
     try {
         await Celebrity.create({ name, occupation, catchPhrase });
         res.redirect('/celebrities');
     } catch (error) {
+        console.error(error.message);
         next(error);
     }
 });

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.set('strictQuery', false);
+
 
 const celebritySchema = new mongoose.Schema({
   name: {
@@ -14,13 +14,8 @@ const celebritySchema = new mongoose.Schema({
   catchPhrase: {
     type: String,
     default: "No catchphrase"
-  },
-  // image: {
-  //   type: String,
-  //   default: "https://via.placeholder.com/150"
-  // }
-  
-   
+  }
+
 });
 
 const Celebrity = mongoose.model('Celebrity', celebritySchema);
